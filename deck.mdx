@@ -1,152 +1,260 @@
+import ScreenOne from "./static/images/screen1.png";
+import ScreenTwo from "./static/images/screen2.png";
+import ScreenThree from "./static/images/screen3.png";
+import { Split } from "mdx-deck";
+import { nightOwl } from "@code-surfer/themes";
+import { Text, Box } from "@chakra-ui/react";
 import {
-  CodeSurfer,
-  CodeSurferColumns,
-  Step,
-} from "code-surfer";
-import { github, vsDark } from "@code-surfer/themes";
+  Title,
+  Introduction,
+  ImageColumn,
+  ScreenSetup,
+} from "./components";
+export const theme = nightOwl;
 
-export const theme = vsDark;
+<Head>
+  <title>
+    Aplikasi Pemesanan Makanan Menggunakan React
+  </title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@mhmdbhsk" />
+  <meta name="twitter:title" content="My Presentation" />
+  <meta
+    name="twitter:description"
+    content="Presentation of intern summary"
+  />
+  <meta
+    name="twitter:image"
+    content="https://example.com/card.png"
+  />
+</Head>
 
-# Hello 👋
-
-You are using [MDX Deck](https://github.com/jxnblk/mdx-deck) and [Code Surfer](https://codesurfer.pomb.us)
-
----
-
-<CodeSurfer>
-
-```js title="This is a title" subtitle="and this a subtitle"
-function lorem(ipsum, dolor = 1) {
-  const sit = ipsum == null ? 0 : ipsum.sit;
-  dolor = sit - amet(dolor);
-  return sit
-    ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor)
-    : [];
-}
-
-function incididunt(ipsum, ut = 1) {
-  ut = labore.et(amet(ut), 0);
-  const sit = ipsum == null ? 0 : ipsum.sit;
-
-  if (!sit || ut < 1) {
-    return [];
-  }
-
-  let dolore = 0;
-  let magna = 0;
-  const aliqua = new eiusmod(labore.ut(sit / ut));
-
-  while (dolore < sit) {
-    aliqua[magna++] = consectetur(
-      ipsum,
-      dolore,
-      (dolore += ut)
-    );
-  }
-
-  return aliqua;
-}
-```
-
-```js
-function lorem(ipsum, dolor = 1) {
-  const sit = ipsum == null ? 0 : ipsum.sit;
-  dolor = sit - amet(dolor);
-  return sit
-    ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor)
-    : [];
-}
-
-function adipiscing(...elit) {
-  if (!elit.sit) {
-    return [];
-  }
-
-  const sed = elit[0];
-  return eiusmod.tempor(sed) ? sed : [sed];
-}
-
-function incididunt(ipsum, ut = 1) {
-  ut = labore.et(amet(ut), 0);
-  const sit = ipsum == null ? 0 : ipsum.sit;
-
-  if (!sit || ut < 1) {
-    return [];
-  }
-
-  let dolore = 0;
-  let magna = 0;
-  const aliqua = new eiusmod(labore.ut(sit / ut));
-
-  while (dolore < sit) {
-    aliqua[magna++] = consectetur(
-      ipsum,
-      dolore,
-      (dolore += ut)
-    );
-  }
-
-  return aliqua;
-}
-```
-
-```diff 1[10:14],2[15:19],3[22:27],10:12
-
-```
-
-</CodeSurfer>
+<Title />
 
 ---
 
-<CodeSurferColumns themes={[vsDark, github]}>
-
-<Step>
-
-```js
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
-```
-
-```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
-```
-
-</Step>
-
-<Step>
-
-```js
-const lorem = (ipsum, dolor, sit) => {
-  const amet = dolor - ipsum;
-  return consectetur.adipiscing(
-    {
-      elit: sed.eiusmod(sit - dolor) / amet + 2,
-    },
-    (tempor, incididunt) => ipsum + amet * incididunt
-  );
-};
-
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
-```
-
-```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
-
-const sed = (eiusmod, tempor, incididunt) => {
-  const ut = tempor - eiusmod;
-  return labore.et(
-    {
-      amet: dolore.magna(incididunt - tempor) / ut + 2,
-    },
-    (aliqua, elit) => eiusmod + ut * elit
-  );
-};
-```
-
-</Step>
-
-</CodeSurferColumns>
+<Introduction />
 
 ---
 
-docs:  
-[codesurfer.pomb.us](https://codesurfer.pomb.us)
+# Outline
+
+<Steps>
+  <ul>
+    <li>Judul Laporan</li>
+    <li>Alasan Pemilihan Judul</li>
+    <li>Batasan Laporan</li>
+    <li>Sistematika</li>
+    <li>Rangkuman Laporan</li>
+  </ul>
+</Steps>
+
+---
+
+# Judul Laporan
+
+<Steps>
+  <ul>
+    <Text fontSize={50} my={0}>
+      Aplikasi Pemesanan Makanan
+    </Text>
+    <Text fontSize={50} mt={0}>
+      Berbasis Web Menggunakan React JS
+    </Text>
+  </ul>
+</Steps>
+
+---
+
+# Mengapa?
+
+<Box width="75%">
+  <Steps>
+    <Text>
+      Karena menurut salah{" "}
+      <a
+        href="https://twitter.com/nickbulljs/status/1349265793465397248"
+        style={{ textDecoration: "none", color: "#61dafb" }}
+      >
+        seorang
+      </a>{" "}
+      senior developer, aplikasi e-commerce merupakan salah
+      satu cara terbaik untuk menguasai Javascript terutama
+      React dan paling banyak ditemui pada pekerjaan
+      sesungguhnya.
+    </Text>
+    <Text>
+      Alasan tersebut membuat penulis memilih judul ini agar
+      dapat mengedukasi pembaca agar kedepannya dapat lebih
+      mahir atau paham dengan Javascript.
+    </Text>
+    <Text>
+      Serta selain itu, ini merupakan proyek yang dikerjakan
+      oleh penulis di KodingWorks.
+    </Text>
+  </Steps>
+</Box>
+
+---
+
+# Lingkup Pembahasan
+
+<Box width="75%">
+  <Steps>
+    <Text>
+      Untuk bahasan pada laporan kali ini meliputi landasan
+      teori tentang fundamental Javascript yang dibutuhkan,
+      serta fundamental React JS. Kemudian ada studi kasus
+      dimana penulis akan membuat proyek sederhana membuat
+      aplikasi pemesanan makanan namun hanya terbatas sampai
+      tampilan saja, tidak termasuk <i>back-end</i> nya
+    </Text>
+  </Steps>
+</Box>
+
+---
+
+# Sistematika
+
+<Box width="75%">
+  <Steps>
+    <Text>
+      Berikut ini sistematika atau garis besar laporan yang
+      dibuat oleh penulis
+    </Text>
+    <Text>
+      <b>Bab 1</b> Pendahuluan (Latar Belakang, Tujuan,
+      Alasan Pemilihan Judul, Pembatasan Laporan, Metode
+      Pengumpulan Data, Sistematika Laporan)
+    </Text>
+    <Text>
+      <b>Bab 2</b> Tinjauan Umum Perusahaan (Hal hal yang
+      berhubungan dengan perusahaan )
+    </Text>
+    <Text>
+      <b>Bab 3</b> Landasan Teori (Apa apa saja yang perlu
+      diketahui pembaca sebagai dasar ketika membaca laporan
+      penulis)
+    </Text>
+    <Text>
+      <b>Bab 4</b> Pembahasan (Bahasan pokok dari materi
+      yang akan disampaikan penulis)
+    </Text>
+    <Text>
+      <b>Bab 5</b> Penutup (Kesimpulan dari laporan yang
+      sudah dibuat)
+    </Text>
+  </Steps>
+</Box>
+
+---
+
+# Rangkuman
+
+---
+
+<ScreenSetup />
+
+---
+
+<Split>
+
+<Box width="100%" m={0} p={72}>
+  <Text textAlign="left" fontWeight="bold">
+    Halaman Login
+  </Text>
+  <Text textAlign="left">
+    Meliputi juga koneksi API untuk login menggunakan
+    Firebase
+  </Text>
+  <Text textAlign="left" fontWeight="bold">
+    Halaman Home
+  </Text>
+  <Text textAlign="left">
+    Implementasi <i>fetch API</i> untuk menampilkan
+    produk-produk, dan kategori yang tersedia
+  </Text>
+</Box>
+
+<ImageColumn src={ScreenOne} alt="screen one" />
+
+</Split>
+
+---
+
+<Split>
+
+<ImageColumn src={ScreenTwo} alt="screen two" />
+
+<Box width="100%" m={0} p={72}>
+  <Text textAlign="left" fontWeight="bold">
+    Halaman Kategori
+  </Text>
+  <Text textAlign="left">
+    Selain layout, penulis juga akan mengelola state
+    menggunakan <i>Context API</i> untuk keranjang belanja
+  </Text>
+  <Text textAlign="left" fontWeight="bold">
+    Pop Up Detail Produk
+  </Text>
+  <Text textAlign="left">
+    Implementasi <i>fetching API</i> detail produk dan pop
+    up pada aplikasi
+  </Text>
+</Box>
+
+</Split>
+
+---
+
+<Split>
+
+<Box width="100%" m={0} p={72}>
+  <Text textAlign="left" fontWeight="bold">
+    Halaman Checkout
+  </Text>
+  <Text textAlign="left">
+    Membuat layout serta Implementasi dummy checkout sebagai
+    simulasi pembuatan aplikasi e-commerce
+  </Text>
+  <Text textAlign="left" fontWeight="bold">
+    Halaman Riwayat Order
+  </Text>
+  <Text textAlign="left">
+    Membuat logika dan implementasi <i>fetch API</i> pada
+    riwayat order
+  </Text>
+</Box>
+
+<ImageColumn src={ScreenThree} alt="screen three" />
+
+</Split>
+
+---
+
+# Kesimpulan? Apa dampaknya?
+
+<Steps>
+  <Box width="75%">
+    <Text textAlign="left">
+      Dengan dibuatnya aplikasi ini, diharapkan para pembaca
+      dapat membuat aplikasi e-commerce sendiri.
+    </Text>
+  </Box>
+  <Box width="75%">
+    <Text textAlign="left">
+      Dan dapat mempermudah para pelanggan dalam menggunakan
+      dan membeli barang di warung atau toko anda.
+    </Text>
+  </Box>
+  <Box width="75%">
+    <Text textAlign="left">
+      Serta, dapat semakin menambah pengetahuan tentang
+      seluk beluk pembuatan aplikasi.
+    </Text>
+  </Box>
+</Steps>
+
+---
+
+# Terima Kasih
