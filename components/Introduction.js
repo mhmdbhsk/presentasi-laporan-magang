@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Avatar, Box, Text, Flex } from "@chakra-ui/react";
-import MyAvatar from "../static/images/avatar.webp";
+import MyAvatar from "../images/avatar.webp";
 
 const Introduction = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Box, Text, Flex } from "@chakra-ui/react";
-import Screen from "../static/images/ss-setup.png";
+import Screen from "../images/ss-setup.png";
 
 const ScreenSetup = () => {
   return (

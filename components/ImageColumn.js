@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const ImageColumn = ({ src, alt }) => {
   return (
